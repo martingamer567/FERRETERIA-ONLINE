@@ -1,0 +1,19 @@
+.links-header {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+
+  a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.4rem 0.7rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--amarillo);
+      color: var(--negro);
+    }
+  }
+}

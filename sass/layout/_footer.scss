@@ -1,0 +1,20 @@
+.footer {
+  background-color: var(--negro);
+  color: var(--blanco);
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+
+  ol {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  a {
+    color: var(--amarillo);
+    text-decoration: none;
+    font-weight: bold;
+  }
+}

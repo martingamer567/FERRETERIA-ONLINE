@@ -1,0 +1,56 @@
+.contenedor,
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.seccion {
+  background-color: var(--blanco);
+  width: 320px;
+  padding: 1.5rem;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+  }
+
+  img {
+    width: 100%;
+    max-width: 180px;
+    object-fit: contain;
+  }
+}
+
+.precios {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--gris-oscuro);
+}
+
+
+button,
+.boton {
+  background-color: var(--amarillo);
+  color: var(--negro);
+  border: none;
+  padding: 0.6rem 1.3rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  &:hover {
+    background-color: var(--amarillo-oscuro);
+    transform: scale(1.06);
+  }
+}

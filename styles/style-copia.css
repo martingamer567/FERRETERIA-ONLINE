@@ -1,157 +1,39 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-:root {
-  --negro: #1f1f1f;
-  --gris: #2c2c2c;
-  --gris-claro: #f2f2f2;
-  --amarillo: #f5c400;
-  --amarillo-oscuro: #d4a800;
-  --blanco: #ffffff;
-}
+                                                                  /*HEADER*/
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--gris-claro);
-  color: var(--negro);
-  line-height: 1.5;
-}
-
-/* =====================
-   HEADER
-===================== */
 .header {
-  background-color: var(--negro);
-  color: var(--blanco);
+  background: linear-gradient(90deg, var(--negro), var(--gris-oscuro));
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
   gap: 1rem;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+  border-bottom: 4px solid var(--amarillo);
 }
 
 .logo {
-  width: 80px;
+  width: 75px;
   border-radius: 8px;
 }
 
 .titulo-empresa {
+  color: var(--amarillo);
   font-size: 1.8rem;
   letter-spacing: 1px;
 }
 
-.links-header {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
 
-.links-header a,
-.header a {
-  color: var(--blanco);
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  transition: background 0.3s;
-}
+                                                                /*PREGUNTAS FRECUENTES*/
 
-.links-header a:hover,
-.header a:hover {
-  background-color: var(--amarillo);
-  color: var(--negro);
-}
 
-/* =====================
-   MAIN TITLES
-===================== */
-.titulo-index,
-.titulo-footer,
-.titulo-secc-ind {
-  text-align: center;
-  margin: 2rem 0 1rem;
-}
-
-.titulo-index {
-  font-size: 2rem;
-}
-
-/* =====================
-   CONTENEDORES / CARDS
-===================== */
-.contenedor,
-.products {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  padding: 2rem;
-}
-
-.seccion {
-  background-color: var(--blanco);
-  width: 320px;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.8rem;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.seccion:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-}
-
-.seccion img {
-  width: 100%;
-  max-width: 180px;
-  object-fit: contain;
-}
-
-.precios {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: var(--gris);
-}
-
-/* =====================
-   BOTONES
-===================== */
-button,
-.boton {
-  background-color: var(--amarillo);
-  border: none;
-  padding: 0.6rem 1.2rem;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-button:hover,
-.boton:hover {
-  background-color: var(--amarillo-oscuro);
-  transform: scale(1.05);
-}
-
-/* =====================
-   PREGUNTAS FRECUENTES
-===================== */
 .preguntas-frecuentes {
-  max-width: 800px;
+  max-width: 900px;
   margin: 2rem auto;
   padding: 1.5rem;
   background-color: var(--blanco);
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 details {
@@ -161,17 +43,10 @@ details {
 summary {
   cursor: pointer;
   font-weight: bold;
+  color: var(--gris-oscuro);
 }
 
-/* =====================
-   SOBRE NOSOTROS
-===================== */
-.titulo-sobrenosotros {
-  background-color: var(--negro);
-  color: var(--blanco);
-  padding: 2rem;
-  text-align: center;
-}
+                                                                      /*SOBRE NOSOTROS*/
 
 .texto-relleno {
   max-width: 900px;
@@ -179,35 +54,11 @@ summary {
   padding: 1.5rem;
   background-color: var(--blanco);
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-/* =====================
-   FOOTER
-===================== */
-.footer {
-  background-color: var(--gris);
-  color: var(--blanco);
-  padding: 2rem;
-  margin-top: 3rem;
-}
+                                                                        /*MOBILE*/
 
-.footer ol {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.footer a {
-  color: var(--amarillo);
-  text-decoration: none;
-}
-
-/* =====================
-   RESPONSIVE
-===================== */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -220,7 +71,7 @@ summary {
 
   .seccion {
     width: 100%;
-    max-width: 350px;
+    max-width: 360px;
   }
 }
 
@@ -229,7 +80,7 @@ summary {
     font-size: 1.4rem;
   }
 
-  .titulo-index {
+  h2 {
     font-size: 1.6rem;
   }
 }
