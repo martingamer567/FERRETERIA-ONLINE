@@ -1,179 +1,235 @@
-                                        /*header principal*/
-.header{
-    display: flex;          
-    justify-content: space-between; 
-    align-items: center;
-    padding: 10px 5%;      
-    background-color: #f8f8f8; 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.titulo-empresa{
-
-    color: brown;
-    text-align: center;
-    border-radius: 7px;
-
+:root {
+  --negro: #1f1f1f;
+  --gris: #2c2c2c;
+  --gris-claro: #f2f2f2;
+  --amarillo: #f5c400;
+  --amarillo-oscuro: #d4a800;
+  --blanco: #ffffff;
 }
 
-.titulo-empresa{
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--gris-claro);
+  color: var(--negro);
+  line-height: 1.5;
+}
 
-    text-align: center;
-
+/* =====================
+   HEADER
+===================== */
+.header {
+  background-color: var(--negro);
+  color: var(--blanco);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  gap: 1rem;
 }
 
 .logo {
-    width: 100px;            
-    height: auto;
+  width: 80px;
+  border-radius: 8px;
 }
 
-.links-header{
-    display: grid;
-    grid-column: auto;
-    row-gap: 5px;
-    margin-left: 20px;      
-    text-decoration: none;
-    color: blue;            
+.titulo-empresa {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
 }
 
+.links-header {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 
+.links-header a,
+.header a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
 
-                            /*titulos principales*/
+.links-header a:hover,
+.header a:hover {
+  background-color: var(--amarillo);
+  color: var(--negro);
+}
 
+/* =====================
+   MAIN TITLES
+===================== */
+.titulo-index,
+.titulo-footer,
+.titulo-secc-ind {
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
 
+.titulo-index {
+  font-size: 2rem;
+}
 
-.titulo-index{
-    display: flex;
+/* =====================
+   CONTENEDORES / CARDS
+===================== */
+.contenedor,
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.seccion {
+  background-color: var(--blanco);
+  width: 320px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.seccion:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.seccion img {
+  width: 100%;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+.precios {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--gris);
+}
+
+/* =====================
+   BOTONES
+===================== */
+button,
+.boton {
+  background-color: var(--amarillo);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover,
+.boton:hover {
+  background-color: var(--amarillo-oscuro);
+  transform: scale(1.05);
+}
+
+/* =====================
+   PREGUNTAS FRECUENTES
+===================== */
+.preguntas-frecuentes {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: var(--blanco);
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+details {
+  margin-bottom: 1rem;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* =====================
+   SOBRE NOSOTROS
+===================== */
+.titulo-sobrenosotros {
+  background-color: var(--negro);
+  color: var(--blanco);
+  padding: 2rem;
+  text-align: center;
+}
+
+.texto-relleno {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: var(--blanco);
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer {
+  background-color: var(--gris);
+  color: var(--blanco);
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.footer ol {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.footer a {
+  color: var(--amarillo);
+  text-decoration: none;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .links-header {
     justify-content: center;
-    color: brown;
-    background-color: whitesmoke;
-    max-width: 500px;
-    margin-left: 450px;
-    border-left: solid brown;
-    border-radius: 10px;
-    border-right: solid brown;
+  }
+
+  .seccion {
+    width: 100%;
+    max-width: 350px;
+  }
 }
 
-.titulo{
+@media (max-width: 480px) {
+  .titulo-empresa {
+    font-size: 1.4rem;
+  }
 
-    border-radius: 7px;
-    box-shadow: 5px 2px 1px 1px whitesmoke;
-
-}
-
-.titulo-secc-ind{
-
-    background-color: whitesmoke;
-    border-radius: 10px;
-    border-left: brown solid 4px;
-    border-right: brown solid 4px;    
-
-}
-
-                            /*precios*/
-.precios{
-
-    color: blue;
-    background-color: whitesmoke;
-    border-radius: 5px;
-    max-width: 80px;
-    margin: auto;
-    
-
-}
-
-
-
-                            /* secciones en gral*/
-.products{
-
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    justify-content: center;
-    margin-top: 20px;
-        
-}
-
-.seccion{
-
-    color: brown;
-    padding: 20px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    text-align: center;
-    margin-bottom: 30px;
-
-}
-
-                                /* footers */
-
-.footer{
-    color: black;
-    background-color: gray;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-bottom: 20px;
-}
-
-.titulo-footer{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-    border-bottom: 5px solid black;
-    padding-bottom: 1px;
-
-}
-
-                            /* pagina sobre nosotros */
-
-.texto-relleno{
-    background-color: rgb(193, 116, 116);
-    max-width: 800px;
-    text-align: center;
-    margin-left: 300px;
-    border-radius: 10px;
-    border-left: 5px solid rgb(107, 60, 10);
-    margin-bottom: 100px;
-
-}
-
-
-.titulo-sobrenosotros{
-    text-align: center;
-    color: brown;
-    border-radius: 15px;
-    background-color: rgb(226, 117, 117);
-    border-left: solid rgb(83, 56, 16);
-    margin-bottom: 50px;
-    
-}
-
-.contenedor{
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    margin-top: 20px;
-}
-
-
-
-.preguntas-frecuentes{
-
-    margin-left: 20px;
-}
-
-
-.boton{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 35px;
-    background-color: var(--color-principal);
-    color: var(--color-texto);
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 8px;
-    box-shadow: 0 4px 0px var(--color-oscuro);
-    transition: all 0.2s ease-in-out;
-    font-family: 'Segoe UI', Arial, sans-serif;
+  .titulo-index {
+    font-size: 1.6rem;
+  }
 }
