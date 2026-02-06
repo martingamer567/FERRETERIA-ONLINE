@@ -1,5 +1,5 @@
 
-                                                                  /*HEADER*/
+                                        /*HEADER*/
 
 .header {
   background: linear-gradient(90deg, var(--negro), var(--gris-oscuro));
@@ -24,7 +24,7 @@
 }
 
 
-                                                                /*PREGUNTAS FRECUENTES*/
+                                     /*PREGUNTAS FRECUENTES*/
 
 
 .preguntas-frecuentes {
@@ -46,7 +46,7 @@ summary {
   color: var(--gris-oscuro);
 }
 
-                                                                      /*SOBRE NOSOTROS*/
+                                          /*SOBRE NOSOTROS*/
 
 .texto-relleno {
   max-width: 900px;
@@ -57,7 +57,7 @@ summary {
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-                                                                        /*MOBILE*/
+                                                /*MOBILE*/
 
 @media (max-width: 768px) {
   .header {
@@ -84,3 +84,4 @@ summary {
     font-size: 1.6rem;
   }
 }
+

@@ -1,20 +1,103 @@
 .footer {
-  background-color: var(--negro);
+  background: var(--gris-oscuro);
   color: var(--blanco);
-  padding: 2rem 1rem;
-  margin-top: 3rem;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  margin-top: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .titulo-footer {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+
+    &::after {
+      content: "";
+      width: 60%;
+      height: 3px;
+      background-color: var(--amarillo-oscuro); 
+      display: block;
+      margin: 0.6rem auto 0;
+      border-radius: 5px;
+    }
+  }
 
   ol {
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
-  }
+    padding: 0;
+    margin: 0;
 
-  a {
-    color: var(--amarillo);
-    text-decoration: none;
-    font-weight: bold;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+    max-width: 900px;
+    margin-inline: auto;
+
+    li {
+      background-color: var(--negro);
+      padding: 1rem 1.2rem;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+      strong {
+        color: var(--amarillo-oscuro);
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 1rem;
+
+    .titulo-footer {
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+    }
+
+    ol {
+      grid-template-columns: 1fr;
+
+      li {
+        font-size: 0.9rem;
+        padding: 0.9rem 1rem;
+
+        strong {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2.5rem 1.5rem;
+
+    .titulo-footer {
+      font-size: 1.8rem;
+    }
+
+    ol {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
